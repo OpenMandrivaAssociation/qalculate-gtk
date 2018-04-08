@@ -46,16 +46,16 @@ This package provides the GTK+ frontend.
 %build
 autoreconf -fiv
 %configure
-%make
+%make_build
 
 %install
 %makeinstall_std
 
-#icons 
+#icons
 for i in 16 32 64 48 64 128 256 512
 do
 	install -dm 755 %{buildroot}%{_iconsdir}/hicolor/${i}x${i}/apps
-	convert -size ${i}x${i} data/%{bname}.png %{buildroot}%{_iconsdir}/hicolor/${i}x${i}/apps/%{name}.png 
+	convert -size ${i}x${i} data/%{bname}.png %{buildroot}%{_iconsdir}/hicolor/${i}x${i}/apps/%{name}.png
 done
 
 # desktop
@@ -65,7 +65,7 @@ desktop-file-install \
 	--add-category="Calculator" \
 	--set-icon="%{name}" \
 	--dir %{buildroot}%{_datadir}/applications \
-	%{buildroot}%{_datadir}/applications/* 
+	%{buildroot}%{_datadir}/applications/*
 
 # locales
 %find_lang %{name} --with-gnome
