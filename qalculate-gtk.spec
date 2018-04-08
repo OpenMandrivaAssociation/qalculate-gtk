@@ -9,8 +9,9 @@ Group:		Office
 Url:		https://qalculate.github.io/
 Source0:	https://github.com/Qalculate/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	desktop-file-utils
-BuildRequires:	imagemagick
+BuildRequires:	gmp-devel
 BuildRequires:	intltool
+BuildRequires:	imagemagick
 BuildRequires:	rarian
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	pkgconfig(glib-2.0)
