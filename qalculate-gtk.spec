@@ -51,7 +51,7 @@ autoreconf -fiv
 %make_build
 
 %install
-%makeinstall_std
+%make_install
 
 #icons
 for i in 16 32 64 48 64 128 256 512
