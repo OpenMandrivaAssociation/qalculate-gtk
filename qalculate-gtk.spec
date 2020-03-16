@@ -17,7 +17,7 @@ BuildRequires:	perl(XML::Parser)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:	pkgconfig(libqalculate) >= %{version}
+BuildRequires:	pkgconfig(libqalculate)
 BuildRequires:  pkgconfig(mpfr)
 Requires(pre):	rarian
 Requires:	gnuplot
