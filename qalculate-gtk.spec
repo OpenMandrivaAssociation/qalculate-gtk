@@ -2,7 +2,7 @@
 
 Summary:	A very versatile desktop calculator
 Name:		%{bname}-gtk
-Version:	3.2.0
+Version:	3.8.0a
 Release:	1
 License:	GPLv2+
 Group:		Office
@@ -17,7 +17,7 @@ BuildRequires:	perl(XML::Parser)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:	pkgconfig(libqalculate) >= %{version}
+BuildRequires:	pkgconfig(libqalculate)
 BuildRequires:  pkgconfig(mpfr)
 Requires(pre):	rarian
 Requires:	gnuplot
@@ -35,10 +35,10 @@ This package provides the GTK+ frontend.
 %doc AUTHORS ChangeLog NEWS README TODO
 %doc doc/html
 %{_bindir}/*
-%{_datadir}/appdata/%{name}.appdata.xml
+%{_datadir}/metainfo/%{name}.appdata.xml
 %{_datadir}/applications/*
-%{_datadir}/pixmaps/*.png
-%{_iconsdir}/hicolor/*/apps/%{name}.png
+%{_iconsdir}/hicolor/*/apps/qalculate.{svg,png}
+%{_man}/man1/qalculate-gtk.1.*
 
 #----------------------------------------------------------------------------
 
@@ -52,13 +52,6 @@ autoreconf -fiv
 
 %install
 %make_install
-
-#icons
-for i in 16 32 64 48 64 128 256 512
-do
-	install -dm 755 %{buildroot}%{_iconsdir}/hicolor/${i}x${i}/apps
-	convert -size ${i}x${i} data/%{bname}.png %{buildroot}%{_iconsdir}/hicolor/${i}x${i}/apps/%{name}.png
-done
 
 # desktop
 desktop-file-install \
