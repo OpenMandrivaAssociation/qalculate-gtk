@@ -2,7 +2,7 @@
 
 Summary:	A very versatile desktop calculator
 Name:		%{bname}-gtk
-Version:	3.8.0
+Version:	3.8.0a
 Release:	1
 License:	GPLv2+
 Group:		Office
@@ -35,10 +35,9 @@ This package provides the GTK+ frontend.
 %doc AUTHORS ChangeLog NEWS README TODO
 %doc doc/html
 %{_bindir}/*
-%{_datadir}/appdata/%{name}.appdata.xml
+%{_datadir}/metainfo/%{name}.appdata.xml
 %{_datadir}/applications/*
-%{_datadir}/pixmaps/*.png
-%{_iconsdir}/hicolor/*/apps/%{name}.png
+%{_iconsdir}/hicolor/*/apps/qalculate.{svg,png}
 
 #----------------------------------------------------------------------------
 
