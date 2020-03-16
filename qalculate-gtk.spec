@@ -38,6 +38,7 @@ This package provides the GTK+ frontend.
 %{_datadir}/metainfo/%{name}.appdata.xml
 %{_datadir}/applications/*
 %{_iconsdir}/hicolor/*/apps/qalculate.{svg,png}
+%{_man}/man1/qalculate-gtk.1.*
 
 #----------------------------------------------------------------------------
 
