@@ -53,13 +53,6 @@ autoreconf -fiv
 %install
 %make_install
 
-#icons
-for i in 16 32 64 48 64 128 256 512
-do
-	install -dm 755 %{buildroot}%{_iconsdir}/hicolor/${i}x${i}/apps
-	convert -size ${i}x${i} data/%{bname}.png %{buildroot}%{_iconsdir}/hicolor/${i}x${i}/apps/%{name}.png
-done
-
 # desktop
 desktop-file-install \
 	--remove-category="Application" \
