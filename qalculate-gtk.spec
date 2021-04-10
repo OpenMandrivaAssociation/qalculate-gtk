@@ -3,7 +3,7 @@
 Summary:	A very versatile desktop calculator
 Name:		%{bname}-gtk
 Version:	3.16.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Office
 Url:		https://qalculate.github.io/
@@ -55,15 +55,6 @@ autoreconf -fiv
 
 %install
 %make_install
-
-# desktop
-desktop-file-install \
-	--remove-category="Application" \
-	--add-category="GTK" \
-	--add-category="Calculator" \
-	--set-icon="%{name}" \
-	--dir %{buildroot}%{_datadir}/applications \
-	%{buildroot}%{_datadir}/applications/*
 
 # locales
 %find_lang %{name} --with-gnome
