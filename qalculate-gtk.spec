@@ -2,7 +2,7 @@
 
 Summary:	A very versatile desktop calculator
 Name:		%{bname}-gtk
-Version:	3.17.0
+Version:	3.18.0
 Release:	1
 License:	GPLv2+
 Group:		Office
@@ -57,13 +57,13 @@ autoreconf -fiv
 %make_install
 
 # desktop
-desktop-file-install \
-	--remove-category="Application" \
-	--add-category="GTK" \
-	--add-category="Calculator" \
-	--set-icon="%{name}" \
-	--dir %{buildroot}%{_datadir}/applications \
-	%{buildroot}%{_datadir}/applications/*
+#desktop-file-install \
+#	--remove-category="Application" \
+#	--add-category="GTK" \
+#	--add-category="Calculator" \
+#	--set-icon="%{name}" \
+#	--dir %{buildroot}%{_datadir}/applications \
+#	%{buildroot}%{_datadir}/applications/*
 
 # locales
 %find_lang %{name} --with-gnome
