@@ -56,15 +56,5 @@ autoreconf -fiv
 %install
 %make_install
 
-# desktop
-#desktop-file-install \
-#	--remove-category="Application" \
-#	--add-category="GTK" \
-#	--add-category="Calculator" \
-#	--set-icon="%{name}" \
-#	--dir %{buildroot}%{_datadir}/applications \
-#	%{buildroot}%{_datadir}/applications/*
-
 # locales
 %find_lang %{name} --with-gnome
-
