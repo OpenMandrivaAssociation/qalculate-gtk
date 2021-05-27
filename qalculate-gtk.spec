@@ -46,7 +46,7 @@ This package provides the GTK+ frontend.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
+%setup -qn %{name}-3.19.0
 
 %build
 autoreconf -fiv
