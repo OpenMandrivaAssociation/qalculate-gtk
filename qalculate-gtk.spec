@@ -27,7 +27,7 @@ Qalculate! is a multi-purpose desktop calculator for GNU/Linux. It is small
 and simple to use but with much power and versatility underneath
 
 Features include customizable functions, units, arbitrary precision,
-plotting, and a user-friendly interface (GTK+ and CLI).
+plotting, and a user-friendly interface.
 
 This package provides the GTK+ frontend.
 
@@ -41,12 +41,12 @@ This package provides the GTK+ frontend.
 %{_datadir}/gnome-shell/search-providers/io.github.Qalculate.search-provider.ini
 %{_datadir}/applications/*
 %{_iconsdir}/hicolor/*/apps/qalculate.{svg,png}
-%{_mandir}/man1/qalculate-gtk.1.*
+%{_mandir}/man1/%{name}.1.*
 
 #----------------------------------------------------------------------------
 
 %prep
-%setup -qn %{name}-%{version}
+%setup -q
 
 %build
 autoreconf -fiv
@@ -58,3 +58,4 @@ autoreconf -fiv
 
 # locales
 %find_lang %{name} --with-gnome
+
