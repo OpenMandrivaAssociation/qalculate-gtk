@@ -35,7 +35,7 @@ This package provides the GTK+ frontend.
 %doc AUTHORS ChangeLog NEWS README TODO
 %doc doc/html
 %{_bindir}/*
-%{_libdir}/qalculate-search-provider
+#{_libdir}/qalculate-search-provider
 %{_datadir}/metainfo/%{name}.appdata.xml
 %{_datadir}/dbus-1/services/io.github.Qalculate.SearchProvider.service
 %{_datadir}/gnome-shell/search-providers/io.github.Qalculate.search-provider.ini
