@@ -2,7 +2,7 @@
 
 Summary:	A very versatile desktop calculator
 Name:		%{bname}-gtk
-Version:	5.3.0
+Version:	5.4.0
 Release:	1
 License:	GPLv2+
 Group:		Office
@@ -32,6 +32,7 @@ plotting, and a user-friendly interface.
 This package provides the GTK+ frontend.
 
 %files -f %{name}.lang
+%license COPYING
 %doc AUTHORS ChangeLog NEWS README TODO
 %doc doc/html
 %{_bindir}/*
@@ -46,7 +47,7 @@ This package provides the GTK+ frontend.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 autoreconf -fiv
